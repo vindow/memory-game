@@ -1,0 +1,2 @@
+.card{display:block;border:1px solid grey;width:100px;height:100px;margin:5px;color:#fff;font-size:45pt}.centerContainer{margin:0 auto;width:425px;text-align:center}.board{display:grid;grid-template-rows:repeat(3,100px);grid-template-columns:repeat(4,100px);grid-gap:5px}.scoreBoard{width:100%;display:flex;justify-content:space-between}.scoreText{font-family:Arial,Helvetica,sans-serif;font-size:18pt}.resetButton{margin-top:15px;height:50px;width:50%;background-color:#ff6d38;font-size:24pt;border:1px solid brown}
+/*# sourceMappingURL=main.9fadd978.chunk.css.map */
