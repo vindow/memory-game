@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 const initialState = {
-    deck : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    deck : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    numFlipped : 0
 };
 
 function reducer(state = initialState, action) {
@@ -17,7 +18,8 @@ function reducer(state = initialState, action) {
                         return 1;
                     }
                     return item;
-                })
+                }),
+                numFlipped : state.numFlipped + 1
             };
         case 'FACE_DOWN':
             return {
@@ -26,8 +28,21 @@ function reducer(state = initialState, action) {
                         return 0;
                     }
                     return item;
-                })
+                }),
+                numFlipped : state.numFlipped - 1
             };
+        case 'MATCHED':
+            return {
+                deck : state.deck.map((item, index) => {
+                    if (index === action.value) {
+                        return 2;
+                    }
+                    return item;
+                }),
+                numFlipped : state.numFlipped - 1
+            };
+        case 'RESET':
+            return initialState;
         default:
             return state;
     }

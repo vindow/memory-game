@@ -1,0 +1,32 @@
+.centerContainer {
+    margin: 0 auto;
+    width: 425px;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 5px;
+}
+
+.scoreBoard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scoreText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+}
+
+.resetButton {
+    margin-top: 15px;
+    height: 50px;
+    width: 50%;
+    background-color: #FF6D38;
+    font-size: 24pt;
+    border: solid 1px brown;
+}

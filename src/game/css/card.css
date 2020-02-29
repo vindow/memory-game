@@ -1,0 +1,9 @@
+.card {
+    display: block;
+    border: solid 1px grey;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    color: white;
+    font-size: 45pt;
+}

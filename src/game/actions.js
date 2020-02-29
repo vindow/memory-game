@@ -5,9 +5,22 @@ export function faceUp(value) {
     };
 }
 
+export function matched(value) {
+    return {
+        type : "MATCHED",
+        value
+    };
+}
+
 export function faceDown(value) {
     return {
         type : "FACE_DOWN",
         value
+    };
+}
+
+export function reset() {
+    return {
+        type : "RESET"
     };
 }
